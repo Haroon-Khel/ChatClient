@@ -11,6 +11,7 @@ public class ChatClient2 {
 	private String receivedMessage;
 	private OutputStream outputStream;
 	private PrintWriter printWriter;
+	private String ID;
 	
 	public ChatClient2() {
 		
@@ -36,6 +37,12 @@ public class ChatClient2 {
 			
 			outputStream = socket.getOutputStream();
 			printWriter = new PrintWriter(outputStream, true);
+			
+			System.out.println("Server: Enter your Username:");
+			ID = scanner.nextLine();
+			printWriter.println(ID);
+			printWriter.flush();
+			System.out.println("Server: Welcome. Begin chatting.");
 			
 			while (true) {
 				

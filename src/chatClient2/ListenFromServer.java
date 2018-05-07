@@ -27,8 +27,7 @@ public class ListenFromServer extends Thread {
 	}
 	
 	public void run() {
-		
-		
+	
 		while (run) {
 			
 			try {
